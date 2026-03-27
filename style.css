@@ -1,0 +1,463 @@
+/* ============================================
+   COMING SOON — Bold Rocket Launch Style
+   ============================================ */
+
+:root {
+  /* Type scale */
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+  --text-hero: clamp(3.5rem,   1rem    + 8vw,    9rem);
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Fonts */
+  --font-display: 'Clash Display', 'Arial Black', sans-serif;
+  --font-body: 'General Sans', 'Helvetica Neue', sans-serif;
+
+  /* Colors — vibrant gradient palette */
+  --color-bg: #1a0a2e;
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.7);
+  --color-text-faint: rgba(255, 255, 255, 0.4);
+  --color-accent-pink: #FF2D6B;
+  --color-accent-magenta: #D4145A;
+  --color-accent-purple: #6B1FB1;
+  --color-accent-orange: #FF6B35;
+  --color-accent-gold: #FFD166;
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Background ────────────────────────────── */
+body {
+  background: linear-gradient(135deg, #1a0a2e 0%, #2d1162 30%, #6B1FB1 60%, #D4145A 85%, #FF2D6B 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Floating shapes */
+.bg-shapes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+.shape-1 {
+  width: 500px;
+  height: 500px;
+  background: #FF2D6B;
+  top: -10%;
+  right: -5%;
+  animation: float1 12s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background: #6B1FB1;
+  bottom: -10%;
+  left: -10%;
+  animation: float2 15s ease-in-out infinite;
+}
+
+.shape-3 {
+  width: 300px;
+  height: 300px;
+  background: #FFD166;
+  top: 40%;
+  left: 60%;
+  opacity: 0.15;
+  animation: float3 10s ease-in-out infinite;
+}
+
+.shape-4 {
+  width: 200px;
+  height: 200px;
+  background: #FF6B35;
+  top: 20%;
+  left: 10%;
+  opacity: 0.15;
+  animation: float1 18s ease-in-out infinite reverse;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 30px) scale(1.08); }
+  66% { transform: translate(40px, -20px) scale(0.92); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-40px, -30px); }
+}
+
+/* ── Main Container ────────────────────────── */
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ── Rocket ────────────────────────────────── */
+.rocket-wrapper {
+  width: 100px;
+  margin-bottom: var(--space-6);
+  animation: rocketHover 3s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(255, 45, 107, 0.3));
+}
+
+@keyframes rocketHover {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.rocket {
+  width: 100%;
+  height: auto;
+}
+
+/* ── Typography ────────────────────────────── */
+.overline {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: var(--space-2);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  background: linear-gradient(135deg, #ffffff 0%, #FFD166 50%, #FF2D6B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subheadline {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-10);
+  max-width: 480px;
+}
+
+/* ── Countdown ─────────────────────────────── */
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-10);
+}
+
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  min-width: 80px;
+}
+
+.countdown-number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+.countdown-sep {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text-faint);
+  line-height: 1;
+  padding-bottom: 1.2em;
+}
+
+/* ── Email Form ────────────────────────────── */
+.email-form {
+  width: 100%;
+  max-width: 480px;
+}
+
+.input-group {
+  display: flex;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  padding: 5px;
+  transition: border-color var(--transition-interactive),
+              box-shadow var(--transition-interactive);
+}
+
+.input-group:focus-within {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 4px rgba(255, 45, 107, 0.15);
+}
+
+.input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-text);
+  min-width: 0;
+}
+
+.input-group input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.input-group input:focus-visible {
+  outline: none;
+}
+
+.input-group button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-accent-pink), var(--color-accent-magenta));
+  border: none;
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.input-group button:hover {
+  background: linear-gradient(135deg, #ff4a82, #e8165f);
+  transform: scale(1.02);
+}
+
+.input-group button:active {
+  transform: scale(0.98);
+}
+
+.btn-text,
+.btn-success {
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.btn-success {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+button.submitted .btn-text {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+button.submitted .btn-success {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.form-hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  margin-top: var(--space-3);
+  transition: color 300ms ease;
+}
+
+.form-hint.success {
+  color: var(--color-accent-gold);
+}
+
+.form-hint.error {
+  color: #ff6b6b;
+}
+
+/* ── Footer ────────────────────────────────── */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: var(--space-4);
+  z-index: 1;
+}
+
+footer a {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--color-text-muted);
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 600px) {
+  .container {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .countdown {
+    gap: var(--space-2);
+  }
+
+  .countdown-block {
+    padding: var(--space-3) var(--space-3);
+    min-width: 60px;
+  }
+
+  .countdown-number {
+    font-size: var(--text-xl);
+  }
+
+  .countdown-sep {
+    font-size: var(--text-lg);
+  }
+
+  .input-group {
+    flex-direction: column;
+    border-radius: var(--radius-xl);
+    gap: var(--space-2);
+    padding: var(--space-2);
+  }
+
+  .input-group input {
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .input-group button {
+    border-radius: var(--radius-lg);
+    width: 100%;
+    justify-content: center;
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .rocket-wrapper {
+    width: 80px;
+  }
+
+  footer {
+    position: relative;
+    margin-top: var(--space-8);
+  }
+}
+
+/* ── Entrance animations ────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rocket-wrapper {
+  animation: rocketHover 3s ease-in-out infinite, fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.overline {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.headline {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.subheadline {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+.countdown {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.email-form {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
