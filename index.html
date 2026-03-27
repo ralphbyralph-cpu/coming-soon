@@ -36,33 +36,31 @@
 <body>
 
   <main class="container">
-    <!-- Sound wave logo -->
-    <div class="logo-wrapper" aria-label="Matchalita logo">
-      <svg class="soundwave-logo" viewBox="0 0 240 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="50" x2="30" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-        <line x1="210" y1="50" x2="240" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-        <!-- Bars with rounded ends, symmetric waveform -->
-        <rect x="32" y="38" width="6" height="24" rx="3" fill="currentColor" class="bar bar-1"/>
-        <rect x="44" y="30" width="6" height="40" rx="3" fill="currentColor" class="bar bar-2"/>
-        <rect x="56" y="22" width="6" height="56" rx="3" fill="currentColor" class="bar bar-3"/>
-        <rect x="68" y="14" width="6" height="72" rx="3" fill="currentColor" class="bar bar-4"/>
-        <rect x="80" y="8" width="6" height="84" rx="3" fill="currentColor" class="bar bar-5"/>
-        <rect x="92" y="18" width="6" height="64" rx="3" fill="currentColor" class="bar bar-6"/>
-        <rect x="104" y="4" width="6" height="92" rx="3" fill="currentColor" class="bar bar-7"/>
-        <rect x="116" y="12" width="6" height="76" rx="3" fill="currentColor" class="bar bar-8"/>
-        <rect x="128" y="20" width="6" height="60" rx="3" fill="currentColor" class="bar bar-9"/>
-        <rect x="140" y="10" width="6" height="80" rx="3" fill="currentColor" class="bar bar-10"/>
-        <rect x="152" y="18" width="6" height="64" rx="3" fill="currentColor" class="bar bar-11"/>
-        <rect x="164" y="26" width="6" height="48" rx="3" fill="currentColor" class="bar bar-12"/>
-        <rect x="176" y="16" width="6" height="68" rx="3" fill="currentColor" class="bar bar-13"/>
-        <rect x="188" y="30" width="6" height="40" rx="3" fill="currentColor" class="bar bar-14"/>
-        <rect x="200" y="38" width="6" height="24" rx="3" fill="currentColor" class="bar bar-15"/>
+    <!-- Full combo logo from brand guide (page 19) -->
+    <div class="logo-combo" aria-label="Matchalita — A Different Frequency">
+      <svg viewBox="0 0 500 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="combo-logo">
+        <!-- MATCHALITA wordmark -->
+        <text x="250" y="85" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="900" font-size="82" letter-spacing="-3" fill="currentColor">MATCHALITA</text>
+        <!-- Sound wave icon -->
+        <g transform="translate(214, 100)">
+          <line x1="0" y1="28" x2="14" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="58" y1="28" x2="72" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="16" y="20" width="4.5" height="16" rx="2.25" fill="currentColor"/>
+          <rect x="23" y="14" width="4.5" height="28" rx="2.25" fill="currentColor"/>
+          <rect x="30" y="6" width="4.5" height="44" rx="2.25" fill="currentColor"/>
+          <rect x="37" y="10" width="4.5" height="36" rx="2.25" fill="currentColor"/>
+          <rect x="44" y="4" width="4.5" height="48" rx="2.25" fill="currentColor"/>
+          <rect x="51" y="16" width="4.5" height="24" rx="2.25" fill="currentColor"/>
+        </g>
+        <!-- "A DIFFERENT FREQUENCY" arched text -->
+        <defs>
+          <path id="arcPath" d="M 145,170 A 120,120 0 0,0 355,170" fill="none"/>
+        </defs>
+        <text font-family="'DM Sans', sans-serif" font-weight="600" font-size="13.5" letter-spacing="5" fill="currentColor">
+          <textPath href="#arcPath" startOffset="50%" text-anchor="middle">A DIFFERENT FREQUENCY</textPath>
+        </text>
       </svg>
     </div>
-
-    <!-- Wordmark -->
-    <h1 class="wordmark">MATCHALITA</h1>
-    <p class="katakana">マッチャリタ</p>
 
     <p class="tagline">Coming Soon</p>
     <p class="subtext">Something new is brewing. Be the first to know.</p>
