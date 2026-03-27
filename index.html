@@ -20,57 +20,52 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon — Something Big is Launching</title>
-<meta name="description" content="We're building something amazing. Be the first to know when we launch — sign up for early access.">
-<meta property="og:title" content="Coming Soon — Something Big is Launching">
-<meta property="og:description" content="We're building something amazing. Be the first to know when we launch.">
+<title>MATCHALITA — Coming Soon</title>
+<meta name="description" content="MATCHALITA is coming soon. Be the first to know when we launch.">
+<meta property="og:title" content="MATCHALITA — Coming Soon">
+<meta property="og:description" content="MATCHALITA is coming soon. Be the first to know when we launch.">
 
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<!-- Fonts: Noto Serif (headlines), DM Mono (sub-headings), DM Sans (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="./base.css">
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <div class="bg-shapes" aria-hidden="true">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-    <div class="shape shape-4"></div>
-  </div>
-
   <main class="container">
-    <!-- Rocket SVG -->
-    <div class="rocket-wrapper" aria-hidden="true">
-      <svg class="rocket" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Exhaust flames -->
-        <ellipse cx="60" cy="190" rx="18" ry="8" fill="#FF6B35" opacity="0.5">
-          <animate attributeName="ry" values="8;12;8" dur="0.6s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.5;0.3;0.5" dur="0.6s" repeatCount="indefinite"/>
-        </ellipse>
-        <ellipse cx="60" cy="185" rx="12" ry="10" fill="#FFD166" opacity="0.7">
-          <animate attributeName="ry" values="10;15;10" dur="0.5s" repeatCount="indefinite"/>
-        </ellipse>
-        <!-- Body -->
-        <path d="M40 140 L40 70 Q40 20 60 10 Q80 20 80 70 L80 140 Z" fill="white"/>
-        <!-- Nose cone accent -->
-        <path d="M50 55 Q55 25 60 15 Q65 25 70 55 Z" fill="rgba(255,255,255,0.5)"/>
-        <!-- Window -->
-        <circle cx="60" cy="75" r="12" fill="#1a1145" stroke="#e0e0e0" stroke-width="2"/>
-        <circle cx="56" cy="72" r="3" fill="rgba(255,255,255,0.3)"/>
-        <!-- Fins -->
-        <path d="M40 120 L20 155 L40 145 Z" fill="#FF2D6B"/>
-        <path d="M80 120 L100 155 L80 145 Z" fill="#FF2D6B"/>
-        <!-- Bottom detail -->
-        <rect x="40" y="135" width="40" height="10" rx="2" fill="#FFD166"/>
-        <!-- Body stripe -->
-        <rect x="40" y="95" width="40" height="4" rx="2" fill="#e8e8e8"/>
+    <!-- Sound wave logo -->
+    <div class="logo-wrapper" aria-label="Matchalita logo">
+      <svg class="soundwave-logo" viewBox="0 0 240 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="50" x2="30" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <line x1="210" y1="50" x2="240" y2="50" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- Bars with rounded ends, symmetric waveform -->
+        <rect x="32" y="38" width="6" height="24" rx="3" fill="currentColor" class="bar bar-1"/>
+        <rect x="44" y="30" width="6" height="40" rx="3" fill="currentColor" class="bar bar-2"/>
+        <rect x="56" y="22" width="6" height="56" rx="3" fill="currentColor" class="bar bar-3"/>
+        <rect x="68" y="14" width="6" height="72" rx="3" fill="currentColor" class="bar bar-4"/>
+        <rect x="80" y="8" width="6" height="84" rx="3" fill="currentColor" class="bar bar-5"/>
+        <rect x="92" y="18" width="6" height="64" rx="3" fill="currentColor" class="bar bar-6"/>
+        <rect x="104" y="4" width="6" height="92" rx="3" fill="currentColor" class="bar bar-7"/>
+        <rect x="116" y="12" width="6" height="76" rx="3" fill="currentColor" class="bar bar-8"/>
+        <rect x="128" y="20" width="6" height="60" rx="3" fill="currentColor" class="bar bar-9"/>
+        <rect x="140" y="10" width="6" height="80" rx="3" fill="currentColor" class="bar bar-10"/>
+        <rect x="152" y="18" width="6" height="64" rx="3" fill="currentColor" class="bar bar-11"/>
+        <rect x="164" y="26" width="6" height="48" rx="3" fill="currentColor" class="bar bar-12"/>
+        <rect x="176" y="16" width="6" height="68" rx="3" fill="currentColor" class="bar bar-13"/>
+        <rect x="188" y="30" width="6" height="40" rx="3" fill="currentColor" class="bar bar-14"/>
+        <rect x="200" y="38" width="6" height="24" rx="3" fill="currentColor" class="bar bar-15"/>
       </svg>
     </div>
 
-    <p class="overline">Very Soon</p>
-    <h1 class="headline">Launching</h1>
-    <p class="subheadline">We're building something extraordinary.<br>Be the first to experience it.</p>
+    <!-- Wordmark -->
+    <h1 class="wordmark">MATCHALITA</h1>
+    <p class="katakana">マッチャリタ</p>
+
+    <p class="tagline">Coming Soon</p>
+    <p class="subtext">Something new is brewing. Be the first to know.</p>
 
     <!-- Email form -->
     <form class="email-form" id="emailForm" novalidate>
@@ -78,7 +73,7 @@
         <input
           type="email"
           id="emailInput"
-          placeholder="Enter your email"
+          placeholder="your@email.com"
           aria-label="Email address"
           required
           autocomplete="email"
@@ -86,11 +81,11 @@
         <button type="submit" id="submitBtn">
           <span class="btn-text">Notify Me</span>
           <span class="btn-success" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </span>
         </button>
       </div>
-      <p class="form-hint" id="formMessage">No spam. Just one email when we launch.</p>
+      <p class="form-hint" id="formMessage">No spam — just one email when we launch.</p>
     </form>
   </main>
 
