@@ -83,7 +83,7 @@ body {
 
 /* ── Combo Logo ────────────────────────────── */
 .logo-combo {
-  width: clamp(280px, 50vw, 460px);
+  width: clamp(300px, 60vw, 580px);
   margin-bottom: var(--space-10);
   color: var(--color-black);
 }
