@@ -219,27 +219,7 @@ button.submitted .btn-success {
   color: var(--color-scarlet);
 }
 
-/* ── Footer ────────────────────────────────── */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: var(--space-4);
-  z-index: 1;
-}
 
-footer a {
-  font-family: var(--font-subheading);
-  font-size: var(--text-xs);
-  color: var(--color-text-faint);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: var(--color-text-muted);
-}
 
 /* ── Responsive ────────────────────────────── */
 @media (max-width: 600px) {
@@ -266,10 +246,6 @@ footer a:hover {
     padding: var(--space-3) var(--space-6);
   }
 
-  footer {
-    position: relative;
-    margin-top: var(--space-8);
-  }
 }
 
 /* ── Entrance animations ────────────────────── */
